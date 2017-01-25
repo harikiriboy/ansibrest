@@ -155,7 +155,7 @@ class InventoryDetail extends Component {
           {Object.keys(inventory.values[group]).map((attr, idx)=>{
             return <tr key={idx}>
               <th>{attr}</th>
-              <td>{attr !== inventory.values[group][attr] ? inventory.values[group][attr] : ""}</td>
+              <td>{attr !== inventory.values[group][attr] ? JSON.stringify(inventory.values[group][attr]) : ""}</td>
               </tr>
           })}
           </tbody>
